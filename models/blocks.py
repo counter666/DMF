@@ -265,7 +265,6 @@ class DSAB_block(nn.Module):
                 OrderedDict(conv3x3(in_channel, stage_ch, module_name, i))))
             in_channel = stage_ch 
 
-        # feature aggregation
         in_channel = in_ch + layer_per_block * stage_ch 
         self.concat = nn.Sequential(
             OrderedDict(conv1x1(in_channel, concat_ch, module_name, 'concat'))) 
