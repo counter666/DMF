@@ -24,7 +24,7 @@ def jc(result, reference):
     tn = np.count_nonzero(~result & ~reference)
     fn = np.count_nonzero(~result & reference)
 
-    jc = float(tp) / (float(fp+fn+tp)+0.000001)
+    jc = tp / float(fp+fn+tp)
 
     return jc
   
